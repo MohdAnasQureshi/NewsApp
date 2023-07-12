@@ -31,8 +31,35 @@ if (x.matches) {
 
   menuBtn.addEventListener("click", menuFunc);
 } else {
- 
+  const menuBtn = document.getElementsByClassName("sidebarBtn")[0];
+  const menuBox = document.getElementsByClassName("dropdown-box")[0];
+  const footer = document.getElementsByTagName("footer")[0];
+  const main = document.getElementsByTagName("main")[0];
+  
+  function menuFunc() {
+    if (menuBox.style.display === "none") {
+      menuBox.style.display = "block";
+      menuBtn.style.backgroundColor = "rgb(220, 220, 240)";
+      main.style.margin = "";
+      footer.style.left = "28vw";
+      footer.style.width = "72vw";
+
+    } else {
+      menuBox.style.display = "none";
+      menuBtn.style.backgroundColor = "white";
+      main.style.margin = "auto";
+      main.style.marginTop = "2.5rem";
+      footer.style.left = "0";
+      footer.style.width = "100vw";
+    }
+  }
+
+
+  menuBtn.addEventListener("click", menuFunc);
 }
+
+
+
 const darkMode = document.getElementsByClassName("dark")[0];
 const lightMode = document.getElementsByClassName("light")[0];
 const nav = document.getElementsByTagName("nav")[0];
@@ -45,18 +72,19 @@ const newsContentArray = Array.from(newsContent);
 const aside = document.getElementsByTagName("aside")[0];
 const loadMore = document.getElementsByClassName("loadMore")[0];
 const categoryText = document.getElementsByClassName("categoryText")[0];
+const body = document.getElementsByTagName("body")[0];
 
 function darkModeFunc() {
   lightMode.style.backgroundColor = "white";
   nav.style.backgroundColor = "black";
   darkMode.style.backgroundColor = "rgb(255, 227, 255)";
   logoText.style.color = "white";
-  main.style.backgroundColor = "rgb(226, 226, 226)";
   categoryText.style.backgroundColor = "rgb(70, 70, 70)";
   loadMore.innerHTML = `<style>.loadMore:hover {background-color : rgb(70, 70, 70); color : white; box-shadow: 0 0 7px  rgb(70, 70, 70)}</style>
   Load More`;
   cardArray.forEach((card) => {
     card.style.backgroundColor = "rgb(70, 70, 70)";
+    body.style.backgroundColor = "rgb(226, 226, 226)";
   });
   newsContentArray.forEach((newsContent) => {
     newsContent.style.color = "white";
@@ -69,12 +97,12 @@ function lightModeFunc() {
   nav.style.backgroundColor = "white";
   lightMode.style.backgroundColor = "rgb(255, 227, 255)";
   logoText.style.color = "rgb(58, 0, 112)";
-  main.style.backgroundColor = "white";
   categoryText.style.backgroundColor = "rgb(92, 92, 92)";
   loadMore.innerHTML = `<style>.loadMore:hover {background-color : rgb(226, 226, 226)}</style>
   Load More`;
   cardArray.forEach((card) => {
     card.style.backgroundColor = "white";
+    body.style.backgroundColor = "white";
   });
   newsContentArray.forEach((newsContent) => {
     newsContent.style.color = "black";

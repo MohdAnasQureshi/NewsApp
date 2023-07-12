@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     
+     <form>
+        <input type="file" accept="image/*" onchange="document.getElementById('preview').src=window.URL.createObjectURL(this.files[0])">
+        <img src="../Screenshot (12).png" alt="your image" id="preview" width="200px" height="200px" >
+     </form>
+     
+</body>
+</html>

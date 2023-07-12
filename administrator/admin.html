@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin newsShorts</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Enter new news</h1>
+    <div class="news-details">
+    <form action="">
+        <label for="file">Add Image</label>
+        <input type="file" name="" id="file" accept="image/*" onchange="document.getElementById('preview').src=window.URL.createObjectURL(this.files[0])" required>
+        
+
+        <label for="news-heading">Add News Heading</label>
+        <input type="text" name="" id="news-heading" required>
+        
+
+        <label for="news-author">Add Author</label>
+        <input type="text" name="" id="news-author" required>
+         
+
+         <label for="news-date-time">Add Date and Time</label>
+        <input type="datetime" name="" id="news-date-time" required>
+    
+         <label for="news-category">Add Category </label>
+        <select name="" id="news-category" required>
+            <option value="India">India</option>
+            <option value="Business">Business</option>
+            <option value="Sports">Sports</option>
+            <option value="World">World</option>
+            <option value="Politics">Politics</option>
+            <option value="Technology">Technology</option>
+            <option value="Startup">Startup</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="Science">Science</option>
+            <option value="Automobile">Automobile</option>
+        </select>
+   
+        <label for="news-body">Add News Body</label>
+        <textarea name="" id="news-body" cols="30" rows="10" value="" required></textarea>
+        
+        <input type="submit" value="Publish on Website" id="submit">
+    </form>
+
+    <section class="card">
+        <div style="margin-top: 10px;">Preview of website</div>
+        <div class="img">
+            <img src="Screenshot (12) copy.png" alt="" class="image" id="preview" width="300px" height="300px"  >
+        </div>
+        <div class="news-content">
+        <div class="news-heading">News Heading</div>
+        <div class="newsText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet delectus tempore modi culpa
+            ducimus,
+            expedita enim rem minus eum dicta minima veritatis est veniam labore? Recusandae, neque? Nisi
+            deleniti
+            eius tenetur voluptatum eos suscipit nemo sequi sint, rerum obcaecati facilis optio, adipisci non
+            hic.
+           lorem500
+        </div>
+        <div class="news-author">By- Anas Qureshi</div>
+        <div class="news-date">20-06-2023</div>
+    </div>
+    </section>
+</div>
+
+<script src="admin.js" type ='module'></script>
+</body>
+</html>
