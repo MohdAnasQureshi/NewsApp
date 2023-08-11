@@ -35,7 +35,7 @@ if (x.matches) {
   const menuBox = document.getElementsByClassName("dropdown-box")[0];
   const footer = document.getElementsByTagName("footer")[0];
   const main = document.getElementsByTagName("main")[0];
-  
+
   function menuFunc() {
     if (menuBox.style.display === "none") {
       menuBox.style.display = "block";
@@ -43,7 +43,6 @@ if (x.matches) {
       main.style.margin = "";
       footer.style.left = "28vw";
       footer.style.width = "72vw";
-
     } else {
       menuBox.style.display = "none";
       menuBtn.style.backgroundColor = "white";
@@ -54,11 +53,8 @@ if (x.matches) {
     }
   }
 
-
   menuBtn.addEventListener("click", menuFunc);
 }
-
-
 
 const darkMode = document.getElementsByClassName("dark")[0];
 const lightMode = document.getElementsByClassName("light")[0];
@@ -76,15 +72,15 @@ const body = document.getElementsByTagName("body")[0];
 
 function darkModeFunc() {
   lightMode.style.backgroundColor = "white";
-  nav.style.backgroundColor = "black";
+  nav.style.backgroundColor = "rgb(92, 92, 92)";
   darkMode.style.backgroundColor = "rgb(255, 227, 255)";
   logoText.style.color = "white";
   categoryText.style.backgroundColor = "rgb(70, 70, 70)";
   loadMore.innerHTML = `<style>.loadMore:hover {background-color : rgb(70, 70, 70); color : white; box-shadow: 0 0 7px  rgb(70, 70, 70)}</style>
   Load More`;
   cardArray.forEach((card) => {
-    card.style.backgroundColor = "rgb(70, 70, 70)";
-    body.style.backgroundColor = "rgb(226, 226, 226)";
+    card.style.backgroundColor = "black";
+    body.style.backgroundColor = "black";
   });
   newsContentArray.forEach((newsContent) => {
     newsContent.style.color = "white";
@@ -113,4 +109,3 @@ function lightModeFunc() {
 
 darkMode.addEventListener("click", darkModeFunc);
 lightMode.addEventListener("click", lightModeFunc);
-
